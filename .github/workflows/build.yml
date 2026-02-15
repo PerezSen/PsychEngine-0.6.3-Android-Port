@@ -64,8 +64,10 @@ jobs:
           yes | haxelib install hxcpp
           yes | haxelib install layout
           yes | haxelib install linc_luajit
+          yes | haxelib install tjson
       
-          haxelib run openfl setup
+          yes | haxelib run openfl setup
+
 
 
 
