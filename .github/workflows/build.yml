@@ -58,9 +58,11 @@ jobs:
           yes | haxelib install flixel
           yes | haxelib install flixel-tools
           yes | haxelib install flixel-ui
+          yes | haxelib install flixel-addons
           yes | haxelib install hscript
           yes | haxelib install hxcpp
           haxelib run openfl setup
+
 
 
       - name: Configure Android
