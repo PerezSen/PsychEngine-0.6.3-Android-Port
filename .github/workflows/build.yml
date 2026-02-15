@@ -53,6 +53,7 @@ jobs:
       - name: Install Libraries
         run: |
           haxelib setup ~/haxelib
+      
           yes | haxelib install lime
           yes | haxelib install openfl
           yes | haxelib install flixel
@@ -61,7 +62,11 @@ jobs:
           yes | haxelib install flixel-addons
           yes | haxelib install hscript
           yes | haxelib install hxcpp
+          yes | haxelib install layout
+          yes | haxelib install linc_luajit
+      
           haxelib run openfl setup
+
 
 
 
