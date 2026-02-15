@@ -51,7 +51,17 @@ jobs:
           add-to-path: false
 
       - name: Install Libraries
-        run: ${{ inputs.setupCommand }}
+        run: |
+          haxelib setup ~/haxelib
+          yes | haxelib install lime
+          yes | haxelib install openfl
+          yes | haxelib install flixel
+          yes | haxelib install flixel-tools
+          yes | haxelib install flixel-ui
+          yes | haxelib install hscript
+          yes | haxelib install hxcpp
+          haxelib run openfl setup
+
 
       - name: Configure Android
         if: inputs.system == 'Android'
