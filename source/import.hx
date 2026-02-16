@@ -27,7 +27,6 @@ import mobile.options.*;
 import mobile.backend.MobileScaleMode;
 #end
 
-// Android
 #if android
 import android.Tools as AndroidTools;
 import android.Settings as AndroidSettings;
@@ -37,10 +36,7 @@ import android.Permissions as AndroidPermissions;
 import android.os.Environment as AndroidEnvironment;
 import android.os.BatteryManager as AndroidBatteryManager;
 import android.os.Build;
-typedef AndroidVersion = android.os.Build.VERSION;
-typedef AndroidVersionCode = android.os.Build.VERSION_CODES;
 #end
-
 
 // Lua
 #if LUA_ALLOWED
