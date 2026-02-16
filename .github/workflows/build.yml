@@ -54,6 +54,10 @@ jobs:
         run: |
           haxelib setup ~/haxelib
       
+      - name: Install Libraries
+        run: |
+          haxelib setup ~/haxelib
+      
           yes | haxelib install lime
           yes | haxelib install openfl
           yes | haxelib install flixel
@@ -67,12 +71,13 @@ jobs:
       
           haxelib git hxCodec https://github.com/SPLCoding/hxCodec-but-it-works-xd.git
           haxelib git linc_luajit https://github.com/superpowers04/linc_luajit
+      
           git clone https://github.com/MaysLastPlay77/extension-androidtools
           haxelib dev extension-androidtools extension-androidtools
-          
+      
           haxelib list
-          haxelib install openfl --quiet
-
+      
+          haxelib run openfl setup -y
 
           
       - name: Configure Android
