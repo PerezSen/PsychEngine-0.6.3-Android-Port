@@ -63,13 +63,17 @@ jobs:
           yes | haxelib install hscript
           yes | haxelib install hxcpp
           yes | haxelib install layout
+          yes | haxelib install tjson
+      
           haxelib git hxCodec https://github.com/SPLCoding/hxCodec-but-it-works-xd.git
           haxelib git linc_luajit https://github.com/superpowers04/linc_luajit
           haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools
-          yes | haxelib install tjson
+      
+          haxelib list
       
           haxelib run openfl setup -y -quiet
 
+          
       - name: Configure Android
         if: inputs.system == 'Android'
         run: |
